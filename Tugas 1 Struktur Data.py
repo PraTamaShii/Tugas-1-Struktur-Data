@@ -64,7 +64,6 @@ print("Menu Miexue:")
 for nama, harga in menu.items():
     print(f"{nama.capitalize()} -> {harga} rupiah")
 
-
 # Inisialisasi linked list untuk menyimpan pesanan
 keranjang = LinkedList()
 
