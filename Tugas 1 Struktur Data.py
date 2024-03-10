@@ -64,11 +64,12 @@ print("Menu Miexue:")
 for nama, harga in menu.items():
     print(f"{nama.capitalize()} -> {harga} rupiah")
 
+
 # Inisialisasi linked list untuk menyimpan pesanan
 keranjang = LinkedList()
 
 while True:
-    print("\nPilih aksi:")
+    print("\nPilih opsi:")
     print("1. Pesan menu Miexue")
     print("2. Tampilkan pesanan")
     print("3. Bayar pesanan")
@@ -100,3 +101,4 @@ keranjang.tampilkan_pesanan()
 
 # Menampilkan rangkuman pesanan setelah selesai memesan
 keranjang.rangkuman_pesanan()
+    
