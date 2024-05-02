@@ -44,3 +44,20 @@ class Peta:
             self.cityList[kota1].remove(kota2)
             return True
         return False
+
+petaJatim = Peta()
+petaJatim.tambahkanKota("Pasuruan")
+petaJatim.tambahkanKota("Surabaya")
+petaJatim.tambahkanKota("Sidoarjo")
+petaJatim.tambahkanKota("Malang")
+petaJatim.tambahkanKota("Kepanjen")
+petaJatim.tambahkanKota("Kota Mojokerto")
+petaJatim.tambahkanKota("Blitar")
+petaJatim.tambahkanKota("Kediri")
+petaJatim.tambahkanKota("Tulungagung")
+petaJatim.tambahkanKota("Nganjuk")
+petaJatim.tambahkanKota("Trenggalek")
+petaJatim.tambahkanKota("Bojonegoro")
+petaJatim.tambahkanKota("Madiun")
+petaJatim.tambahkanKota("Ponorogo")
+petaJatim.tambahkanKota("Ngawi")
