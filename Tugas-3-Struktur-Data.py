@@ -43,3 +43,43 @@ class peta:
             self.cityList[kota1].remove(kota2)
             return True
         return False
+        
+def djikstra (self, source):
+        #buat sebuah maps yang melacak jarak dari setiap kota ke source
+        distance = {}
+        for city in self.cityList:
+            distance[city] = float('inf')
+        #tentukan jarak ke source = 0
+        distance[source] = 0 
+        #buat sebuah sptset
+
+        unvisited_cities = []
+        for city in self.cityList:
+            unvisited_cities.append(city)
+        print(unvisited_cities)
+
+        #buat perulangan selama unvisited city ada isinya
+        while unvisited_cities:
+            #buat variabel jarak minimum
+            min_distance = float('inf')
+            #buat variabel kota terdekat
+            closest_city = None
+
+            #cari kota terdekat dengan jarak minimum 
+            for city in unvisited_cities:
+                #jika jarak kota lebih kecil daripada min distance
+                if distance [city] < min_distance:
+                #maka closest city di ubah ke kota tersebut
+                    min_distance = distance[city]
+                    closest_city = city
+
+            #hapus vertex u dari unvisited     
+            unvisited_cities.remove(closest_city)
+
+            #perbarui nilai jarak dari semua vertex yang berdekatan
+            for neighbor, jarak in self.cityList[closest_city].items():
+                #jika jaarak kota terdekat ditambahkan weigh, lebih kecil daripada jarak di distance, maka ubah nilai distance
+                jarakNeighbor = distance[closest_city] + jarak
+                if jarakNeighbor < distance[neighbor]:
+                    distance[neighbor] = jarakNeighbor
+        return distance
