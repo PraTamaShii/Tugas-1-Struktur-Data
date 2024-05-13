@@ -83,3 +83,49 @@ def djikstra (self, source):
                 if jarakNeighbor < distance[neighbor]:
                     distance[neighbor] = jarakNeighbor
         return distance
+    
+
+            
+
+petaJatim = peta()
+petaJatim.tambahkanKota("Pasuruan")
+petaJatim.tambahkanKota("Surabaya")
+petaJatim.tambahkanKota("Sidoarjo")
+petaJatim.tambahkanKota("Malang")
+petaJatim.tambahkanKota("Kepanjen")
+petaJatim.tambahkanKota("Kota Mojokerto")
+petaJatim.tambahkanKota("Blitar")
+petaJatim.tambahkanKota("Kediri")
+petaJatim.tambahkanKota("Tulungagung")
+petaJatim.tambahkanKota("Nganjuk")
+petaJatim.tambahkanKota("Trenggalek")
+petaJatim.tambahkanKota("Bojonegoro")
+petaJatim.tambahkanKota("Madiun")
+petaJatim.tambahkanKota("Ponorogo")
+petaJatim.tambahkanKota("Ngawi")
+#jalur antar kota
+petaJatim.tambahkanJalan("Pasuruan","Kota Mojokerto",63)
+petaJatim.tambahkanJalan("Pasuruan","Malang",50)
+petaJatim.tambahkanJalan("Sidoarjo","Kota Mojokerto",37)
+petaJatim.tambahkanJalan("Sidoarjo","Malang",67)
+petaJatim.tambahkanJalan("Kepanjen","Malang",21)
+petaJatim.tambahkanJalan("Kepanjen","Blitar",58)
+petaJatim.tambahkanJalan("Surabaya","Kota Mojokerto",50)
+petaJatim.tambahkanJalan("Surabaya","Sidoarjo",32)
+petaJatim.tambahkanJalan("Surabaya","Bojonegoro",111)
+petaJatim.tambahkanJalan("Kota Mojokerto","Nganjuk",71)
+petaJatim.tambahkanJalan("Kota Mojokerto","Kediri",73)
+petaJatim.tambahkanJalan("Malang","Blitar",79)
+petaJatim.tambahkanJalan("Blitar","Tulungagung",29)
+petaJatim.tambahkanJalan("Tulungagung","Trenggalek",34)
+petaJatim.tambahkanJalan("Trenggalek","Ponorogo",50)
+petaJatim.tambahkanJalan("Nganjuk","Madiun",52)
+petaJatim.tambahkanJalan("Madiun","Ponorogo",33)
+petaJatim.tambahkanJalan("Madiun","Ngawi",28)
+petaJatim.tambahkanJalan("Ngawi","Bojonegoro",75)
+
+print('------------------------------') 
+JarakSemuaKotaDariKotaMojokerto = petaJatim.djikstra('Kota Mojokerto')
+print("Jarak kota berikut dari Kota Mojokerto adalah :")
+for city,distance in JarakSemuaKotaDariKotaMojokerto.items():
+    print(city," Adalah ", distance," KM")
